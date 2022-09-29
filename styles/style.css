@@ -1,0 +1,283 @@
+body {
+    background: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    padding: 1.5rem 1rem;
+}
+
+/* STARTS */
+
+.start {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 73vh;
+    gap: 1rem;
+}
+
+.buttons {
+    border: 1px solid #0A3871;
+    border-radius: 1.5rem;
+    padding: 24px;
+    margin: 3% 0 0 10%;
+    background-color: inherit;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    color: #0A3871;
+}
+
+.buttons:active {
+    -webkit-transform: translate(0.31rem, 0.31rem);
+    transform: translate(0.31rem, 0.31rem);
+}
+
+.buttons:hover {
+    transform: scale(1.12);
+    font-weight: bold;
+}
+
+#btn__start__game {
+    width: 19.81rem;
+    height: 6.56rem;
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+
+#btn__start__word {
+    width: 17.37rem;
+    height: 4.18rem;
+    color: #0A3871;
+}
+
+/* INPUT */
+
+.input {
+    /* flex */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 73vh;
+}
+
+.input__text {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem 0 1rem;
+}
+
+.input__word {
+    width: 100%;
+    padding: 0;
+    background-color: inherit;
+    font-family: inherit;
+    color: #0a3871;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    overflow: hidden;
+}
+
+.input__word::placeholder {
+    color: #0a3871;
+}
+
+.input__word:focus {
+    outline: none;
+}
+
+.input__controls__restriction {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    padding: 0 1rem;
+}
+
+.input__controls__restriction p {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.input__controls__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+.buttons__rest {
+    width: 21.43rem;
+    height: 4.18rem;
+}
+
+#btn__save, #btn__new {
+    background-color: #0A3871;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+
+/* GAME */
+
+.game {
+    /* flex */
+    display: none;
+    flex-direction: column;
+
+}
+
+.game__area {
+    text-align: center;
+}
+
+#game__canvas__img {
+    margin-top: 0;
+    width: calc(16.79rem * 0.5);
+    height: calc(21.94rem * 0.5);
+}
+
+#inputKey {
+    background-color: #F3F5FC;
+    color: #F3F5FC;
+    border: none;
+    outline: none;
+    width: 1;
+    height: 1;
+}
+
+#game__canvas__text {
+    margin-top: 1rem;
+    width: calc(19rem * 0.8);
+    height: calc(7.25rem * 0.8);
+}
+
+.game__controls__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.5rem;
+    /*gap: 0.5rem;*/
+}
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    background-color: #0A3871;
+    color: #FFFFFF;
+    margin-top: 24px;
+    padding: 8px 16px 8px 16px;
+    text-align: center;
+    line-height: 130%;
+}
+
+.footer_dash {
+    visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+
+    header {
+        padding: 4.67rem 2.5rem;
+    }
+
+    .input__text {
+        padding: 3rem 1rem 0 2.5rem;
+    }
+
+    .input__controls__restriction {
+        margin-top: 3rem;
+        padding: 0 2.05rem;
+    }
+
+    .input__controls__buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #game__canvas__img {
+        margin-top: 7.35rem;
+        width: 18.375rem;
+        height: 22.5rem;
+    }
+
+    #game__canvas__text {
+        margin-top: 2.5rem;
+        width: 29rem;
+        height: 9.5rem;
+    }
+
+    .game__controls__buttons {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 6.81rem;
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
+
+    .footer_dash {
+        visibility: visible;
+    }
+}
+@media screen and (min-width: 1024px) {
+
+    header {
+        padding: 2.5rem 5.25rem 0;
+    }
+
+
+    .input__text {
+        padding: 8rem 20rem 0;
+    }
+
+    .input__controls {
+        padding: 0 20rem;
+    }
+
+    .input__controls__restriction {
+        margin-top: 10.75rem;
+        padding: 0;
+        justify-content: left;
+    }
+
+    .input__controls__buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    #game__canvas__img {
+        margin-top: 0;
+    }
+
+    #game__canvas__text {
+        margin-top: 1rem;
+    }
+
+    .game__controls__buttons {
+        margin-top: 1rem;
+    }
+
+    footer {
+        margin-top: 3.1rem;
+    }
+
+}

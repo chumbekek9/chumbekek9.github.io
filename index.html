@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo Alura">
+    </header>
+
+    <main>
+
+        <section class="start">
+            <button id="btn__start__game" class="buttons">Iniciar Juego</button>
+            <button id="btn__start__word" class="buttons">Agregar nueva palabra</button>
+        </section>
+
+
+        <section class="input">
+
+            <div class="input__text">
+
+                <input class="input__word" placeholder="Ingrese una palabra" maxlength="8">
+
+            </div>
+
+            <div class="input__controls">
+                <div class="input__controls__restriction">
+                    <img src="images/admiracion.png" alt="signo de admiración">
+                    <p>Max. de 8 letras</p>
+                </div>
+                <div class="input__controls__buttons">
+
+                    <button id="btn__save" class="buttons buttons__rest">Guardar y empezar</button>
+
+                    <button id="btn__cancel" class="buttons buttons__rest">Cancelar</button>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="game">
+
+            <div class="game__area">
+                <div>
+                    <canvas id="game__canvas__img"></canvas>
+                </div>
+
+                <input type="text" id="inputKey" maxlength="1">
+
+                <div>
+                    <canvas id="game__canvas__text"></canvas>
+                </div>
+
+            </div>
+
+            <div class="game__controls__buttons">
+                <button id="btn__new" class="buttons buttons__rest">Nuevo juego</button>
+                <button id="btn__desist" class="buttons buttons__rest">Desistir</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Oracle Next Education + Alura Latam <span class="footer_dash">-</span> Challenge 2 "Ahorcado" by Maitte Robles & Sebastian Valencia</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/canvas.js"></script>
+</body>
+</html>
